@@ -112,12 +112,12 @@
 .navbar_ul li{
     padding-left: 40px;
 }
-.navbar_ul li a{
+.navbar_link{
     text-decoration: none;
     color: black;
     font-size: larger;
 }
-.navbar_ul li a:hover{
+.navbar_link:hover{
     text-decoration: none;
     color: rgb(2, 111, 111);
     font-size: larger;

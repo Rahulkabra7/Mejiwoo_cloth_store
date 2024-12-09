@@ -4,6 +4,7 @@ import './Navbar.css';
 import Search from '../img/Vector.png';
 import Cart from '../img/teenyicons_bag-outline.png';
 import User from '../img/uiw_user.png';
+import{Link} from 'react-router-dom';
 
 function Navbar() {
   const [products, setProducts] = useState([]);
@@ -46,10 +47,10 @@ function Navbar() {
     <div className='navbar_main_div'>
         <div className='navbar_ul_div'>
             <ul className='navbar_ul'>
-                <li><a href="">Home</a></li>
-                <li><a href="">Product</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">SALE</a></li>
+                <li><Link className='navbar_link' to="/Home">Home</Link></li>
+                <li><Link className='navbar_link' to="/Product">Product</Link></li>
+                <li><Link className='navbar_link' to="/Categories">Categories</Link></li>
+                <li><Link className='navbar_link' to="/SALE">SALE</Link></li>
             </ul>
         </div>
         <div className='navbar_mid_div'>
@@ -58,14 +59,14 @@ function Navbar() {
         </div>
         <div className='navbar_last_div'>
             <div>
-                <input 
-                    className='navbar_search_box' 
-                    type="text" 
-                    name="Search" 
-                    id="Search" 
-                    placeholder='Search by Category' 
+                <input
+                    className='navbar_search_box'
+                    type="text"
+                    name="Search"
+                    id="Search"
+                    placeholder='Search by Category'
                     value={searchQuery}
-                    onChange={handleSearch} 
+                    onChange={handleSearch}
                 />
                 <img className='Search_icon' src={Search} alt="Search_icon"/>
             </div>
